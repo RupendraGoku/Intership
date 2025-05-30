@@ -12,21 +12,21 @@ import Footer from './components/Footer'
 function App() {
  
   return (
-    <div className="main-container"  >
+    <div  id="main-container" className="main-container"  >
      <TopHeader/>
      <Navbar/>
      <TopSection/>
      <Second/>
      <div>
-      <a href=".main-container">
+      <a href="#main-container">
         <button className='top-button' >
           <ArrowUp size={34}/>
         </button>
       </a>
+     </div>
       <Third/>
       <Bottom/>
       <Footer/>
-     </div>
     </div>
   )
 }
