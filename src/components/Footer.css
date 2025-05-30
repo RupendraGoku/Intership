@@ -159,20 +159,58 @@
 
 /* Responsive */
 @media screen and (max-width: 768px) {
+  .footer {
+    padding: 60px 20px 20px;
+    height: auto;
+    background-position: center;
+  }
+
   .footer-container {
     flex-direction: column;
-    gap: 30px;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  .footer-section h3,
+  .footer-section li {
+    margin-left: 0;
+  }
+
+  .footer-newsletter {
+    max-width: 100%;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .subscribe-form input {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+
+  .subscribe-form button {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 14px;
   }
 
   .footer-bottom {
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
     text-align: center;
+    gap: 10px;
+    padding-top: 30px;
   }
 
   .social-icons {
-    margin-top: 10px;
+    justify-content: center;
+    margin-top: 12px;
+  }
+
+  .social-icons svg {
+    margin: 0 8px;
   }
 }

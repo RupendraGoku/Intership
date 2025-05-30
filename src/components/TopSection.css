@@ -26,6 +26,58 @@
     align-items: center;
   }
 }
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto; /* Allow height to adjust naturally */
+    background-position: center; /* Center background for better view */
+  }
+
+  .hero-container {
+    margin: 0 5%;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .main-heading {
+    font-size: 36px; /* Responsive font size */
+    text-align: center; /* Center text for mobile */
+  }
+
+  .subtext {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center; /* Center buttons */
+    flex-wrap: wrap;
+  }
+
+  .hero-image-wrap {
+    justify-content: center; /* Center image */
+    margin-bottom: 20px; /* Adjust margin */
+    margin-right: 0; /* Remove negative margin */
+  }
+
+  .hero-image {
+    transform: translate(0, 0); /* Reset transformation */
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 28px; /* Smaller font size for small screens */
+  }
+
+  .info-card {
+    width: 90%; /* Adjust card width */
+  }
+}
 
 .hero-text {
   flex: 3;
@@ -143,7 +195,7 @@
 .card-section {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 10px;
   margin: -20px auto 0; /* Increased negative margin to overlap hero section more */
   padding: 0 10px;
   position: relative;
@@ -155,7 +207,7 @@
 .info-card { 
   margin-top: -40px;
   background: white;
-  height: 300px;
+  height: 200px;
   width: 410px;
   color: #1e293b;
   text-align: center;
@@ -168,18 +220,18 @@
 
 .icon {
   position: relative;
-  width: 85px;
-  height: 85px;
+  width: 55px;
+  height: 55px;
   margin: 0 auto 15px;
 }
 
 .icon-img {
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%; /* smaller than container */
-  height: 60%;
+  height: 50%;
   object-fit: contain;
   z-index: 3;
   opacity: 1;
@@ -188,11 +240,11 @@
 
 .shape {
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.2); /* 130% size */
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   object-fit: contain;
   z-index: 1;
   opacity: 1;
@@ -227,8 +279,11 @@
   z-index: 4; /* Higher than .texture-overlay and icons */
   transition: all 0.3s ease;
   h3{
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 700;
+  }
+  p{
+    font-size: 10px;
   }
 }
 

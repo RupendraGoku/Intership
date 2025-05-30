@@ -117,3 +117,44 @@
 .cont:hover::before {
   background-color: #1e3a8a;
 }
+@media (max-width: 768px) {
+  .main {
+    padding: 40px 20px;
+    height: auto;
+    background-position: center;
+  }
+
+  .paragraph h5 {
+    font-size: 14px;
+  }
+
+  .paragraph h1 {
+    font-size: 24px;
+  }
+
+  .container-third {
+    grid-template-columns: 1fr; /* 1 column */
+    gap: 24px;
+    padding: 10px;
+  }
+
+  .cont {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .cont h1 {
+    font-size: 18px;
+  }
+
+  .cont p {
+    font-size: 13px;
+  }
+
+  .cont::before {
+    font-size: 16px;
+    padding: 6px 14px;
+  }
+}

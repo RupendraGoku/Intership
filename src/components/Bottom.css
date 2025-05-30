@@ -9,3 +9,19 @@
 .image{
     margin-top: 6%;
 }
+@media (max-width: 768px) {
+  .mainCont {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 40px 20px;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+  }
+
+  .image {
+    margin-top: 20px;
+  }
+}
