@@ -29,11 +29,6 @@
   flex: 1;
   justify-content: right;
 }
-$ git add .
-$ git commit -m "first commit"
-$ git branch -M main
-$ git remote add origin https://github.com/RupendraGoku/Intership.git
-$ git push -u origin main
 .nav-item {
   position: relative;
 }
