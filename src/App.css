@@ -1,0 +1,39 @@
+@import "tailwindcss";
+html{
+    scroll-behavior: smooth;
+}
+.main-container{
+    background-color:#F3F7FD;
+}
+.top-button {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 10rem;
+  background-color: #0C59DB;
+  border: 2px solid white; 
+
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000; /* Make sure it's above other elements */
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.top-button {
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,119 @@
+.main{
+    background: url(../images/service-bg.png) no-repeat left center;
+  background-size: cover;
+  background-position:50% ;
+    font-family: 'Segoe UI', sans-serif;
+    height: 120vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+
+}
+.paragraph{
+    margin-top: 20px;
+
+    text-align: center;
+    h5{
+        font-size: 17px;
+        font-weight: 500;
+        color:#0C59DB;
+        margin-bottom: 16px;
+    }
+}
+
+.paragraph h1{
+    color:white;
+}
+
+.container-third {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, auto);   /* 2 rows */
+  gap: 32px; /* spacing between items */
+  padding: 20px;
+}
+
+.cont {
+  height: 300px;
+  width: 400px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden; /* Hide overflow for hover effect */
+  transition: color 0.3s ease;
+}
+
+.cont img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 16px;
+  background-color: #ddeaff;
+  padding: 2px;
+  border-radius: 50%;
+}
+
+.cont h1 {
+  font-size: 22px;
+  color: #0c1b33;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+
+.cont p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.cont::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #2563eb; /* Blue color */
+  z-index: 0;
+  transition: width 0.4s ease;
+}
+
+.cont:hover::after {
+  width: 100%;
+}
+
+.cont::before {
+  content: attr(data-number);
+  position: absolute;
+  top: 26px;
+  right: 1px;
+  background-color: #e6edff;
+  color: #1e40af;
+  padding: 10px 20px;
+  border-radius: 40px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  font-size: 20px;
+  font-weight: 600;
+  z-index: 3;
+}
+
+.cont * {
+  position: relative;
+  z-index: 1;
+}
+
+.cont:hover h1,
+.cont:hover p,
+.cont:hover::before {
+  color: white;
+}
+
+.cont:hover::before {
+  background-color: #1e3a8a;
+}

@@ -1,0 +1,238 @@
+.container {
+  background-color: #F3F7FD;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 40px;
+  flex-wrap: wrap;
+  gap: 100px;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 20rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* LEFT SECTION */
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* EXPERIENCE CARD */
+.experience-card {
+  background: linear-gradient(180deg, #1164ED 50%, #0C59DB 50%);
+  color: white;
+  width: 160px;
+  height: 200px;
+  border-radius: 8px;
+  text-align: center;
+  padding-top: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  /* margin-top:80px ; */
+  position: absolute;
+}
+
+.years {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background-color: white;
+  margin: 12px auto;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* MAIN IMAGE */
+.image-main {
+  position: relative;
+  z-index: 1;
+}
+
+/* BACKGROUND SHAPE IMAGE */
+.image-shape {
+  position: absolute;
+  bottom: 0px;
+  left: 370px;
+  z-index: 0;
+}
+
+.image-shape {
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* RIGHT SECTION */
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+/* HEADING */
+.heading {
+  color: #1164ED;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+/* MAIN PARAGRAPH */
+.paragraph {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0E1E36;
+  margin-bottom: 20px;
+}
+
+/* SUBTEXT PARAGRAPH */
+.paragraph + .paragraph {
+  font-size: 16px;
+  font-weight: 400;
+  color: #5C6C7F;
+  line-height: 1.8;
+  margin-top: -10px;
+  max-width: 520px;
+}
+
+/* FEATURE ITEMS */
+.small-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 35px;
+}
+
+.small-image-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0E1E36;
+}
+
+.small-image-item img {
+  width: 38px;
+  height: 38px;
+}
+
+/* Discover Button Styles with Hover Effect */
+.discoverButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+  padding: 14px 30px;
+  background-color: #0C59DB;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: fit-content;
+  position: relative;       /* Added for pseudo-element positioning */
+  overflow: hidden;         /* Needed for ::before animation */
+  z-index: 1;               /* Makes text appear above ::before */
+  transition: color 0.4s ease;
+  border: 1px solid #2563eb; /* Optional: to match .btn border */
+}
+
+.discoverButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #031833;
+  z-index: -1;
+  transition: left 0.4s ease;
+}
+
+.discoverButton:hover::before {
+  left: 0;
+}
+
+.discoverButton:hover {
+  color: #fff; /* Ensures text remains readable */
+}
+
+.arrow {
+  margin-left: 60%;   
+  margin-top: -10%;    
+}
+.arrow {
+  animation: spin-oscillate 2s infinite ease-in-out;
+  transform-origin: 20% 20%; /* or 'center center', both work */
+  display: block;
+}
+
+@keyframes spin-oscillate {
+ 
+  0%  { transform: rotate(0deg); }
+  50%  { transform: rotate(-30deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .image-main {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .right {
+    padding-top: 40px;
+    padding-left: 0;
+  }
+
+  .small-images {
+    grid-template-columns: 1fr;
+  }
+
+  .image-shape {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+  }
+}

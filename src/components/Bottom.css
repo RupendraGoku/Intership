@@ -1,0 +1,11 @@
+.mainCont{
+        background: url(../images/subscribebg.jpg) no-repeat left center;
+  background-position:90% ;
+    height: 28vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.image{
+    margin-top: 6%;
+}
