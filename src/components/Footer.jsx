@@ -4,6 +4,21 @@ import logo2 from '../images/logo2.png';
 
 function Footer() {
   return (
+      <>
+    <div className="map-address-section">
+  <h2>Find Us Here</h2>
+  <div className="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28777.605759013398!2d85.12323227645327!3d25.619334820953264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed587ae5a50f2b%3A0x40b87e078e5b2207!2sRmanam%20Infotech%20%7C%20Website%20Design%20Development%20%7C%20Mobile%20App%20%7C%20Patna%2C%20Highway%20Services%2C%20Opp%20Transport%20Nagar%2C%20New%20Bypass%20Road%2C%20NH%2030%2C%20Patna%2C%20Bihar%20800016!5e0!3m2!1sen!2sin!4v1717050000000!5m2!1sen!2sin"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>
+
+    
     <div className='footer'>
       <div className='footer-container'>
 
@@ -72,6 +87,7 @@ function Footer() {
         
       </div>
     </div>
+    </>
   );
 }
 
