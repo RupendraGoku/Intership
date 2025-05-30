@@ -215,22 +215,24 @@
     margin: 0 8px;
   }
 }
-
 .map-address-section {
-  padding: 40px 20px;
+  height: auto; /* Let it adapt to content height */
+  width: auto;
+  padding: 20px 20px; /* Reduced padding */
   background-color: #f9f9f9;
   text-align: center;
 }
 
 .map-address-section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 15px;
   color: #333;
+  font-weight: 600;
 }
 
 .map-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 40%; /* Reduced height (was 56.25%) */
   height: 0;
   overflow: hidden;
   border-radius: 12px;
@@ -239,9 +241,22 @@
 
 .map-container iframe {
   position: absolute;
+  height: 100%;
+  width: 100%;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   border: 0;
+}
+@media (max-width: 768px) {
+  .map-address-section {
+    padding: 15px 15px;
+  }
+
+  .map-address-section h2 {
+    font-size: 20px;
+  }
+
+  .map-container {
+    padding-bottom: 65%; /* Taller aspect ratio for better fit */
+  }
 }
