@@ -3,10 +3,26 @@
   background-size: cover;
   background-position: 10%;
   color: white;
-  padding: 110px 90px 20px;
-  margin-left: -50px;
+  padding: 110px 90px 60px; /* Increased bottom padding */
+  margin-left: 0; /* Remove negative margin */
   font-family: 'Segoe UI', sans-serif;
-  height: 65vh;
+  min-height: 65vh; /* Changed to min-height for flexibility */
+  position: relative;
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Add pseudo-element to ensure background covers entire footer */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../images/footer-bg.jpg) no-repeat left center;
+  background-size: cover;
+  background-position: 10%;
+  z-index: -1;
 }
 
 .footer-container {
@@ -16,17 +32,21 @@
   gap: 100px;
   max-width: 1200px;
   margin: auto;
+  position: relative;
+  z-index: 1;
 }
 
 /* Left Column */
 .footer-left {
   flex: 1 1 250px;
   max-width: 300px;
+  min-width: 250px; /* Ensure minimum width */
 }
 
 .navbar-logo img {
   width: 170px;
   margin-bottom: 20px;
+  max-width: 100%; /* Responsive image */
 }
 
 .footer-left p {
@@ -35,10 +55,6 @@
   margin-bottom: 20px;
   line-height: 1.6;
 }
-
-
-
-
 
 /* Footer Sections */
 .footer-section {
@@ -88,6 +104,7 @@
 .footer-newsletter {
   flex: 1 1 260px;
   max-width: 300px;
+  min-width: 260px; /* Ensure minimum width */
 }
 
 .footer-newsletter h3 {
@@ -107,6 +124,7 @@
   border: 1px solid #ffffff33;
   border-radius: 6px;
   overflow: hidden;
+  width: 100%; /* Ensure full width */
 }
 
 .subscribe-form input {
@@ -117,6 +135,7 @@
   background-color: #1e2a44;
   color: #fff;
   font-size: 16px;
+  min-width: 0; /* Allow input to shrink */
 }
 
 .subscribe-form button {
@@ -126,6 +145,7 @@
   padding: 0 16px;
   cursor: pointer;
   transition: background-color 0.3s;
+  flex-shrink: 0; /* Prevent button from shrinking */
 }
 
 .subscribe-form button:hover {
@@ -134,15 +154,19 @@
 
 /* Footer Bottom */
 .footer-bottom {
-  margin-top: 40px;
+  margin-top: 60px;
   padding-top: 20px;
   border-top: 1px solid #ffffff22;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  font-size: 13px;
+  font-size: 16px;
   color: #cbd5e1;
+  position: relative;
+  z-index: 1;
+  background: transparent; /* Ensure transparent background */
+  width: 100%;
 }
 
 .social-icons svg {
@@ -157,19 +181,31 @@
   color: #00bcd4;
 }
 
+/* Add zoom-specific media queries */
+@media screen and (min-width: 769px) {
+  .footer-container {
+    gap: clamp(50px, 8vw, 100px); /* Responsive gap */
+  }
+  
+  .footer {
+    padding: clamp(80px, 10vw, 110px) clamp(60px, 8vw, 90px) 60px;
+  }
+}
+
 /* Responsive */
 @media screen and (max-width: 768px) {
   .footer {
-    padding: 60px 20px 20px;
-    height: auto;
+    padding: 60px 20px 40px;
+    min-height: auto;
     background-position: center;
+    margin-left: 0;
   }
 
   .footer-container {
     flex-direction: column;
     align-items: stretch;
     gap: 40px;
-    padding: 0 40px; /* Add this */
+    padding: 0 20px;
   }
 
   .footer-section h3,
@@ -179,6 +215,11 @@
 
   .footer-newsletter {
     max-width: 100%;
+    min-width: auto;
+  }
+
+  .footer-left {
+    min-width: auto;
   }
 
   .subscribe-form {
@@ -204,6 +245,7 @@
     text-align: center;
     gap: 10px;
     padding-top: 30px;
+    margin-top: 30px;
   }
 
   .social-icons {
@@ -215,24 +257,26 @@
     margin: 0 8px;
   }
 }
+
+/* Map section - no changes needed as it looks good */
 .map-address-section {
-  height: auto; /* Let it adapt to content height */
+  height: auto;
   width: auto;
-  padding: 20px 20px; /* Reduced padding */
+  padding: 20px 150px;
   background-color: #f9f9f9;
   text-align: center;
 }
 
 .map-address-section h2 {
-  font-size: 24px;
+  font-size: 28px;
   margin-bottom: 15px;
   color: #333;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .map-container {
   position: relative;
-  padding-bottom: 40%; /* Reduced height (was 56.25%) */
+  padding-bottom: 40%;
   height: 0;
   overflow: hidden;
   border-radius: 12px;
@@ -247,6 +291,7 @@
   left: 0;
   border: 0;
 }
+
 @media (max-width: 768px) {
   .map-address-section {
     padding: 15px 15px;
@@ -257,6 +302,22 @@
   }
 
   .map-container {
-    padding-bottom: 65%; /* Taller aspect ratio for better fit */
+    padding-bottom: 65%;
   }
 }
+.location-icon {
+  width: 45px; /* adjust as needed */
+  height: 45px;
+  margin-left: 10px; /* small spacing between text and icon */
+  margin-bottom: 10px;
+  vertical-align: middle;
+  display: inline; /* ensures it stays on the same line */
+}
+
+@media (max-width: 768px) {
+  .location-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
