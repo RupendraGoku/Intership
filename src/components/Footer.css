@@ -263,7 +263,10 @@
   height: auto;
   width: auto;
   padding: 20px 150px;
-  background-color: #f9f9f9;
+  background-image: url(../images/mapimage.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 200%;
   text-align: center;
 }
 
@@ -306,6 +309,7 @@
   }
 }
 .location-icon {
+  border-radius: 50%;
   width: 45px; /* adjust as needed */
   height: 45px;
   margin-left: 10px; /* small spacing between text and icon */
@@ -316,8 +320,9 @@
 
 @media (max-width: 768px) {
   .location-icon {
-    width: 16px;
-    height: 16px;
+    
+    width: 20px;
+    height: 20px;
   }
 }
 

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import './TopSection.css';
 import heroThumb from '../images/heroThumb.png';
