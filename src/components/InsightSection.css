@@ -1,0 +1,164 @@
+.mainSection {
+  padding: 60px 10%;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.text1 {
+  color: #007bff;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.text2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #222;
+}
+
+.topcontSection {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.blogContainer {
+  flex: 1 1 30%;
+  min-width: 300px;
+  height: 450px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.blogContainer:hover {
+  transform: translateY(-10px);
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  padding: 20px 20px 0px 20px;
+}
+
+.mainTextCont {
+  padding: 25px;
+}
+
+.textInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #007bff;
+}
+
+.subText {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.titleButton {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.titleButton:hover {
+  color: #007bff;
+}
+
+.readMoreButton {
+  font-size: 14px;
+  background-color: transparent;
+  font-weight: 500;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.readMoreButton:hover {
+  color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .topcontSection {
+    gap: 30px;
+  }
+
+  .blogContainer {
+    flex: 1 1 45%;
+  }
+
+  .text2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blogContainer {
+    flex: 1 1 100%;
+  }
+
+  .mainTextCont {
+    padding: 20px;
+  }
+
+  .text2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mainSection {
+    padding: 40px 5%;
+  }
+
+  .text {
+    margin-bottom: 30px;
+  }
+
+  .text1 {
+    font-size: 12px;
+  }
+  
+  .text2 {
+    font-size: 20px;
+  }
+
+  .textInfo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -69,16 +69,6 @@
   }
 }
 
-@media (max-width: 480px) {
-  .main-heading {
-    font-size: 28px; /* Smaller font size for small screens */
-  }
-
-  .info-card {
-    width: 90%; /* Adjust card width */
-  }
-}
-
 .hero-text {
   flex: 3;
 }
@@ -186,8 +176,10 @@
 
 @media (min-width: 768px) {
   .card-section {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+
   }
+  
 }
 
 

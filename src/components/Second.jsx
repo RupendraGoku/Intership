@@ -9,7 +9,7 @@ import aboutshape2 from '../images/aboutshape2.png';
 
 function Second() {
   return (
-    <div className="container">
+    <div className="container" id='second-section'>
       <div className="left">
         <div className="experience-card">
           <h1 className="years">22+</h1>
