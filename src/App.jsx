@@ -9,6 +9,7 @@ import Third from './components/Third';
 import Bottom from './components/Bottom';
 import Footer from './components/Footer';
 import InsightSection from './components/InsightSection';
+import WatchNow from './components/WatchNow';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
       )}
      </div>
       <Third/>
+            <WatchNow/>
       <InsightSection/>
       <Bottom/>
       <Footer/>
